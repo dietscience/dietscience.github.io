@@ -1,6 +1,6 @@
 ---
 layout: page
-title: ABOUT
+title: Christopher Na
 permalink: /ABOUT/
 ---
 
