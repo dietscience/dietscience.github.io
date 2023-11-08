@@ -27,6 +27,11 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://dietscience.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: dietscience123
 
+author: Christopoher Na
+keywords: 다이어트, 간헌절단식
+copyright: "DS"
+title-logo: /image/title_logo.png
+
 # Build settings
 # minima 테마 연결 해제 하고 기본 테마로 적용
 # theme: minima
