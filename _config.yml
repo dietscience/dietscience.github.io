@@ -28,7 +28,8 @@ url: "https://dietscience.github.io" # the base hostname & protocol for your sit
 twitter_username: dietscience123
 
 # Build settings
-theme: minima
+# minima 테마 연결 해제 하고 기본 테마로 적용
+# theme: minima
 plugins:
   - jekyll-feed
 # Exclude from processing.
