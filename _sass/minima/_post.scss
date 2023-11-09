@@ -1,0 +1,60 @@
+// 포스팅의 레이아웃을 위한 scss
+
+@font-face {
+  font-family: "Giants-Inline";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Giants-Inline.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.featured_img_post {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 10px;
+}
+.post-title {
+  margin-top: 20px;
+  font-family: "Giants-Inline";
+}
+img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 10px;
+}
+
+// 마크 다운 형식들
+
+blockquote {
+  color: black;
+  border-left: 3px solid rgb(92, 152, 242);
+}
+hr {
+  margin: 30px 0;
+}
+.highlighter-rouge {
+  background: none;
+  border: none;
+  border-bottom: 3px solid #aaa;
+  padding: 5px 10px 5px 7px;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+}
+ol {
+  margin: 0 auto;
+  background: #eef;
+  padding: 10px;
+  padding-left: 40px;
+  border-radius: 10px;
+  margin: 40px 0;
+}
+h3 {
+  border: 1px solid salmon;
+  padding: 10px;
+  border-radius: 10px;
+}

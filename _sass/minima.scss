@@ -46,7 +46,8 @@ $on-laptop: 800px !default;
 }
 
 // Import partials.
-@import "minima/base", "minima/layout", "minima/syntax-highlighting";
+@import "minima/base", "minima/layout", "minima/syntax-highlighting",
+  "minima/post";
 
 //눈누 자이언츠체 웹폰트
 @font-face {
@@ -99,6 +100,8 @@ $on-laptop: 800px !default;
   h3 {
     margin-bottom: 10px !important;
     margin-top: 10px;
+    border: none !important;
+    padding: 0;
   }
   .description {
     color: #666;
