@@ -28,8 +28,8 @@ layout: default
                 {{ post.title | escape }}
               </a>
             </h3>
-            <p class="description">
-              {{ post.description | escape }}
+            <p class="excerpt">
+              {{ post.excerpt }}
             </p>
             {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
             <span class="post-meta">{{ post.date | date: date_format }}</span>
@@ -46,11 +46,9 @@ layout: default
                   {{ words | divided_by: 180 }} mins read
                 {% endif %}
               </span>
+
             </div>
-            {%- if site.show_excerpts -%}
-              {{ post.excerpt }}
-            </div>
-          {%- endif -%}
+          </div>
         </li>
       {%- endfor -%}
     </ul>

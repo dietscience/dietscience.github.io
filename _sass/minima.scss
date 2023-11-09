@@ -52,6 +52,7 @@ $on-laptop: 800px !default;
 * {
   // font-family: "Noto Sans KR", sans-serif;
   font-family: "Nanum Gothic Coding", monospace;
+  word-break: keep-all;
 }
 
 // 포스팅 리스트 이미지
@@ -89,6 +90,10 @@ li {
     margin-top: -5px;
     margin-bottom: 0px;
     font-family: "Nanum Pen Script", cursive;
+  }
+  .excerpt {
+    font-size: 15px;
+    letter-spacing: 0.3px;
   }
   .post_footer {
     margin-top: 30px;
