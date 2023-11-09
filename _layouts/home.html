@@ -10,25 +10,54 @@ layout: default
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+    <h2 class="post-list-heading">{{ page.list_title | default: "Dieter" }}</h2>
     <ul class="post-list">
       {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
+        <li>
+          <div class="upper">
+            <a href="{{ post.url | relative_url }}" class="img_link">
+              <img
+                src="{{ post.image | relative_url }}"
+                alt=""
+                class="posts_image">
+            </a>
+          </div>
+          <div class="lower">
+            <h3>
+              <a class="post-link" href="{{ post.url | relative_url }}">
+                {{ post.title | escape }}
+              </a>
+            </h3>
+            <p class="description">
+              {{ post.description | escape }}
+            </p>
+            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+            <span class="post-meta">{{ post.date | date: date_format }}</span>
+            <div class="post_footer">
+              <img
+                src="{{ site.title-logo }}"
+                alt=""
+                class="post_logo">
+              <span title="Estimated read time" class="read_time">
+                {% assign words = page.content | number_of_words %}
+                {% if words < 360 %}
+                  1 min read
+                {% else %}
+                  {{ words | divided_by: 180 }} mins read
+                {% endif %}
+              </span>
+            </div>
+            {%- if site.show_excerpts -%}
+              {{ post.excerpt }}
+            </div>
+          {%- endif -%}
+        </li>
       {%- endfor -%}
     </ul>
 
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+    <p class="rss-subscribe">subscribe
+      <a href="{{ "/feed.xml" | relative_url }}">via RSS</a>
+    </p>
   {%- endif -%}
 
 </div>
