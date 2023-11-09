@@ -66,6 +66,11 @@ $on-laptop: 800px !default;
   word-break: keep-all;
 }
 
+// 헤더 로고
+.header_logo {
+  height: auto;
+}
+
 // 포스팅 리스트 이미지
 .post-list-heading {
   font-size: 20px;
@@ -125,6 +130,7 @@ $on-laptop: 800px !default;
       padding: 3px;
       border: 1px solid rgb(33, 116, 240);
       border-radius: 50%;
+      object-position: center;
     }
     .read_time {
       font-size: 12px;
