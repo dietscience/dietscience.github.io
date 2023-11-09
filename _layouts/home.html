@@ -9,6 +9,53 @@ layout: default
 
   {{ content }}
 
+  {%- assign start_posts = site.posts | where_exp: "post", "post.categories contains 'start'" -%}
+  {%- if start_posts.size > 0 -%}
+    <h2 class="post-list-heading">{{ page.list_title | default: "첫번째 글" }}</h2>
+    <ul class="post-list">
+      {%- for post in start_posts -%}
+        <li class="post_lis">
+          <div class="upper">
+            <a href="{{ post.url | relative_url }}" class="img_link">
+              <img
+                src="{{ post.image | relative_url }}"
+                alt=""
+                class="posts_image">
+            </a>
+          </div>
+          <div class="lower">
+            <h3>
+              <a class="post-link" href="{{ post.url | relative_url }}">
+                {{ post.title | escape }}
+              </a>
+            </h3>
+            <p class="excerpt">
+              {{ post.excerpt }}
+            </p>
+            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+            <span class="post-meta">{{ post.date | date: date_format }}</span>
+            <div class="post_footer">
+              <img
+                src="{{ site.title-logo }}"
+                alt=""
+                class="post_logo">
+              <span title="Estimated read time" class="read_time">
+                {% assign words = post.content | number_of_words %}
+                {% if words < 360 %}
+                  1 min read
+                {% else %}
+                  {{ words | divided_by: 180 }} mins read
+                {% endif %}
+              </span>
+            </div>
+          </div>
+        </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+
+  <hr class="post_break">
+
   {%- if site.posts.size > 0 -%}
     <h2 class="post-list-heading">{{ page.list_title | default: "Dieter" }}</h2>
     <ul class="post-list">
