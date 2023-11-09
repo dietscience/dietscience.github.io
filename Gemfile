@@ -6,11 +6,11 @@ source "https://rubygems.org"
 #     bundle exec jekyll serve --livereload
 
 # 유저 네임, 이메일 확인 명령어
-# git config user.name
-# git config user.email
+#       git config user.name
+#       git config user.email
 # 유저 네임, 이메일 변경 명령어 
-# git config --global user.name dietscience   
-# git config --global user.email dietscience.github.io
+#       git config --global user.name dietscience   
+#       git config --global user.email dietscience.github.io
 
 #
 # This will help ensure the proper Jekyll version is running.
