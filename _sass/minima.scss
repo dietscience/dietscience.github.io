@@ -47,7 +47,7 @@ $on-laptop: 800px !default;
 
 // Import partials.
 @import "minima/base", "minima/layout", "minima/syntax-highlighting",
-  "minima/post";
+  "minima/post", "minima/post-navigation";
 
 //눈누 자이언츠체 웹폰트
 @font-face {

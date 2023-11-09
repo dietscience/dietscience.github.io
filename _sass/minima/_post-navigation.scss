@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "Giants-Inline";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Giants-Inline.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media (min-width: 400px) {
+  .post__navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    .post__prev {
+      display: flex;
+      gap: 0 40px;
+      background: #eef;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 10px;
+      padding: 15px 40px 15px 15px;
+      box-shadow: 3px 3px 10px 1px #ddd;
+      img {
+        width: 100px;
+        height: 100px;
+      }
+      .prev__box {
+        padding: 0 0 0 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: black;
+        text-align: center;
+        gap: 10px 0;
+        h2 {
+          font-size: 18px;
+          font-family: "Giants-Inline";
+          color: #000;
+        }
+        span {
+          margin-top: 20px;
+          text-align: left;
+        }
+      }
+    }
+    .post__next {
+      display: flex;
+      gap: 0 40px;
+      background: #eef;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 10px;
+      padding: 15px 15px 15px 40px;
+      box-shadow: 3px 3px 10px 1px #ddd;
+      img {
+        width: 100px;
+        height: 100px;
+      }
+      .next__box {
+        padding: 0 20px 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: black;
+        text-align: center;
+        gap: 10px 0;
+        h2 {
+          font-size: 18px;
+          font-family: "Giants-Inline";
+          color: #000;
+        }
+        span {
+          margin-top: 20px;
+          text-align: right;
+        }
+      }
+    }
+  }
+}
