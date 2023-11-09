@@ -1,0 +1,44 @@
+<div class="post__navigation">
+  {% assign currentCategory = page.category %}
+
+  {% assign previousPost = nil %}
+  {% assign nextPost = nil %}
+
+  {% for post in site.posts %}
+    {% if post.date < page.date and (previousPost == nil or post.date > previousPost.date) %}
+      {% assign previousPost = post %}
+    {% elsif post.date > page.date and (nextPost == nil or post.date < nextPost.date) %}
+      {% assign nextPost = post %}
+    {% endif %}
+  {% endfor %}
+
+  {% if previousPost %}
+    <a class="post__prev" href="{{ previousPost.url }}">
+      <div class="prev__image__wrap">
+        <img
+          class="prev__image"
+          data-src="{{ site.baseurl }}{{ previousPost.image }}"
+          alt="{{ previousPost.title }}">
+      </div>
+      <div class="prev__box">
+        <span class="post__nav post__nav__prev">이전 글 👈</span>
+        <h2 class="post__nav__title">{{ previousPost.title }}</h2>
+      </div>
+    </a>
+  {% endif %}
+
+  {% if nextPost %}
+    <a class="post__next" href="{{ nextPost.url }}">
+      <div class="next__box">
+        <span class="post__nav post__nav__next">다음 글 👉</span>
+        <h2 class="post__nav__title">{{ nextPost.title }}</h2>
+      </div>
+      <div class="next__image__wrap">
+        <img
+          class="next__image"
+          data-src="{{ site.baseurl }}{{ nextPost.image }}"
+          alt="{{ nextPost.title }}">
+      </div>
+    </a>
+  {% endif %}
+</div>

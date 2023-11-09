@@ -32,6 +32,12 @@ keywords: 최겸, 다이어트, 다이어트식단, 저탄고지, 간헐적단�
 copyright: "DS"
 title-logo: /image/title_logo.png
 
+# Disqus Comments
+disqus:
+  # Leave shortname blank to disable comments site-wide.
+  # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
+  shortname: DietScience
+
 # Build settings
 # minima 테마 연결 해제 하고 기본 테마로 적용
 # theme: minima
