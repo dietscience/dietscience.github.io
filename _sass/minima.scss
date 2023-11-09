@@ -52,6 +52,7 @@ $on-laptop: 800px !default;
 * {
   // font-family: "Noto Sans KR", sans-serif;
   font-family: "Nanum Gothic Coding", monospace;
+  -webkit-font-family: "Nanum Gothic Coding", monospace;
   word-break: keep-all;
 }
 
@@ -72,6 +73,7 @@ li {
   letter-spacing: 1px;
   .post-meta {
     font-family: "Nanum Pen Script", cursive;
+    -webkit-font-family: "Nanum Pen Script", cursive;
   }
   .post-link {
     color: #222;
@@ -79,6 +81,7 @@ li {
     font-size: 35px;
     letter-spacing: 0.2px;
     font-family: "Nanum Pen Script", cursive;
+    -webkit-font-family: "Nanum Pen Script", cursive;
   }
   h3 {
     margin-bottom: 0px !important;
@@ -90,6 +93,7 @@ li {
     margin-top: -5px;
     margin-bottom: 0px;
     font-family: "Nanum Pen Script", cursive;
+    -webkit-font-family: "Nanum Pen Script", cursive;
   }
   .excerpt {
     font-size: 15px;
@@ -113,5 +117,16 @@ li {
       color: #999;
       letter-spacing: -1px;
     }
+  }
+}
+
+// 데스크탑 사이즈 포스트 이미지
+@media (min-width: 490px) {
+  .posts_image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 5px 5px 0 0;
   }
 }
