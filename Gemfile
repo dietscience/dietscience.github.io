@@ -4,6 +4,14 @@ source "https://rubygems.org"
 # file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
 #
 #     bundle exec jekyll serve --livereload
+
+# 유저 네임, 이메일 확인 명령어
+# git config user.name
+# git config user.email
+# 유저 네임, 이메일 변경 명령어 
+# git config --global user.name dietscience   
+# git config --global user.email dietscience.github.io
+
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
