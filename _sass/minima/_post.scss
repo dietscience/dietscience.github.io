@@ -57,6 +57,7 @@ h3 {
   border: 1px solid salmon;
   padding: 10px;
   border-radius: 10px;
+  display: inline-block;
 }
 .photo_list {
   display: flex;
@@ -69,6 +70,64 @@ h3 {
     }
     &.two {
       object-position: center;
+    }
+  }
+}
+.highlight {
+  color: red;
+  font-size: 18px;
+  border-bottom: 2px solid red;
+}
+video {
+  height: 200px;
+}
+
+//타블렛 이상 쿼리
+
+@media (min-width: 426px) {
+  //가로가 긴 이미지 그룹
+  .vertical_group {
+    overflow-y: scroll;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    justify-content: center;
+    gap: 0 10px;
+    .vertical {
+      height: 200px;
+    }
+  }
+}
+
+//모바일 쿼리
+
+@media (max-width: 425px) {
+  //가로가 긴 이미지 그룹
+  .vertical_group {
+    overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    overflow: hidden;
+    justify-content: center;
+    .vertical {
+      height: 200px;
+      width: 200px;
+      &:first-child {
+        transform: translate(-70px);
+      }
+      &:nth-child(2) {
+        transform: translate(70px);
+      }
+      &:nth-child(3) {
+        transform: translate(-70px);
+      }
+      &:nth-child(4) {
+        transform: translate(70px);
+      }
+      &:nth-child(5) {
+        transform: translate(-70px);
+      }
     }
   }
 }
