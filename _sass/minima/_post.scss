@@ -39,7 +39,10 @@ hr {
 .highlighter-rouge {
   background: none;
   border: none;
-  border-bottom: 3px solid #aaa;
+  // border-bottom: 3px solid #aaa;
+  border-left: 2px solid salmon;
+  border-right: 2px solid salmon;
+  margin: 0 10px 0 0;
   padding: 5px 10px 5px 7px;
   font-size: 18px;
   font-weight: bold;
