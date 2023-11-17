@@ -10,10 +10,12 @@
   .post__navigation {
     display: flex;
     justify-content: space-between;
+    gap: 0 30px;
     margin: 100px 0;
     .post__prev {
+      width: 330px !important;
       display: flex;
-      gap: 0 40px;
+      gap: 0 20px;
       background: #eef;
       justify-content: space-between;
       align-items: center;
@@ -44,8 +46,9 @@
       }
     }
     .post__next {
+      width: 330px !important;
       display: flex;
-      gap: 0 40px;
+      gap: 0 20px;
       background: #eef;
       justify-content: space-between;
       align-items: center;
