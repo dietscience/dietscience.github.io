@@ -43,6 +43,8 @@ disqus:
 # theme: minima
 plugins:
   - jekyll-feed
+  #  sitemap.xml 플러그인
+  - jekyll-sitemap
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
