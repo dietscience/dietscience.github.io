@@ -1,41 +1,45 @@
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="keywords" content="{{ page.keywords }}">
-  <meta name="description" content="{{ page.description }}">
-  <meta nave="author" content="{{ site.author }}">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="{{ page.keywords }}" />
+  <meta name="description" content="{{ page.description }}" />
+  <meta nave="author" content="{{ site.author }}" />
+  <!-- main page url 알려주는 태그 -->
+  <link rel="canonical" href="https://dietscience.github.io/" />
   <!-- 파비콘 추가 -->
-  <link
-    rel="icon"
-    type="image/x-icon"
-    href="/image/title_logo.ico">
-  <meta name="naver-site-verification" content="978b6b5ed6e99887d2cebb49af9f61d925fb46ea" />
+  <link rel="icon" type="image/x-icon" href="/image/title_logo.ico" />
+  <meta
+    name="naver-site-verification"
+    content="978b6b5ed6e99887d2cebb49af9f61d925fb46ea"
+  />
   <!-- 구글 에드센스 승인 코드 -->
   <script
     async
     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9792516058121172"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"
+  ></script>
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z0F1H3TYMV"></script>
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-Z0F1H3TYMV"
+  ></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() {
       dataLayer.push(arguments);
     }
-    gtag('js', new Date());
+    gtag("js", new Date());
 
-    gtag('config', 'G-Z0F1H3TYMV');
+    gtag("config", "G-Z0F1H3TYMV");
   </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-  {%- feed_meta -%}
-  {%- if jekyll.environment == 'production' and site.google_analytics -%}
-    {%- include google-analytics.html -%}
-  {%- endif -%}
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}"> {%-
+  feed_meta -%} {%- if jekyll.environment == 'production' and
+  site.google_analytics -%} {%- include google-analytics.html -%} {%- endif -%}
 </head>
